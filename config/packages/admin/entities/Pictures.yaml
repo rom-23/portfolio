@@ -1,0 +1,22 @@
+easy_admin:
+  entities:
+    Pictures:
+      class: App\Entity\Pictures
+      list:
+        title: "All pictures"
+        collapse_actions: true
+        actions: ['show','edit','delete']
+        fields: ['id',{ property: 'name', type: 'image', base_path: '%app.path.portfolio_images%',label: 'Photo' }, 'portfolios', 'createdAt', 'updatedAt']
+      show:
+        fields:
+          - {property: 'name', type: 'image', base_path: '%app.path.portfolio_images%' }
+          - {property: 'portfolios'}
+          - {property: 'createdAt'}
+          - {property: 'updatedAt'}
+      form:
+        fields:
+          - {type: 'group', label: 'General',icon: 'pencil', css_class: 'col-md-8'}
+          - {property: 'imageFile', type: 'vich_image', label: 'Image'}
+          - {property: 'portfolios'}
+          - {property: 'createdAt'}
+          - {property: 'updatedAt'}

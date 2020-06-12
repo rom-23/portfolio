@@ -1,0 +1,19 @@
+easy_admin:
+  entities:
+    Profil:
+      class: App\Entity\Profil
+      list:
+        title: "My profile"
+        collapse_actions: true
+        actions: ['show','edit','delete']
+        fields: ['id','title', 'description']
+      show:
+        fields:
+          - {property: 'title'}
+          - {property: 'description', type: 'raw'}
+      form:
+        fields:
+          - {type: 'group', label: 'General',icon: 'pencil', css_class: 'col-md-8'}
+          - {property: 'title'}
+          - {type: 'section'}
+          - {property: 'description', type: 'text_editor',label: 'Description de experience'}

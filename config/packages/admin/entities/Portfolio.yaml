@@ -1,0 +1,26 @@
+easy_admin:
+  entities:
+    Portfolio:
+      class: App\Entity\Portfolio
+      list:
+        title: "All projects"
+        collapse_actions: true
+        actions: ['show','edit','delete']
+        fields: ['id','title', 'description', 'pictures', 'createdAt','updatedAt']
+      show:
+        fields:
+          - {property: 'title'}
+          - {property: 'description', type: 'raw'}
+          - {property: 'createdAt'}
+          - {property: 'updatedAt'}
+          - {property: 'pictures',template: 'admin/portfolio/_pictures.html.twig'}
+      form:
+        fields:
+          - {type: 'group', label: 'General',icon: 'pencil', css_class: 'col-md-8'}
+          - {property: 'title'}
+          - {property: 'createdAt', type_options: { widget: 'single_text' }}
+          - {property: 'updatedAt', type_options: { widget: 'single_text' }}
+          - {type: 'section'}
+          - {property: 'description', type: 'text_editor',label: 'Description du projet'}
+          - {type: 'group', label: 'Pictures',css_class: 'col-md-4'}
+          - {property: 'pictures', type: 'collection', type_options: {entry_type: 'App\Form\Admin\PictureType', by_reference: false, label: false}}

@@ -1,0 +1,12 @@
+easy_admin:
+  design:
+    menu:
+      - label: 'Portfolio'
+        icon: 'newspaper-o'
+        children:
+          - {entity: 'Portfolio', icon: 'th-list', label: 'Portfolio', css_class: 'default', default: true}
+          - {entity: 'Pictures', icon: 'layer-group', label: 'Pictures'}
+          - {entity: 'Experiences', icon: 'list', label: 'Experiences'}
+          - {entity: 'Profil', icon: 'clone', label: 'Profil'}
+          - {entity: 'Skills', icon: 'clone', label: 'Skills'}
+
