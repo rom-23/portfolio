@@ -388,6 +388,7 @@ menu, nav, section {
 
 .card {
     padding: 1em;
+
 }
 
 .card-text.card-title {
@@ -503,6 +504,7 @@ menu, nav, section {
 
 @media (min-width: 368px) {
     .text-about {
+        text-align: justify;
         padding: 2em;
     }
 
@@ -552,7 +554,7 @@ menu, nav, section {
         padding-right: 2em;
         padding-bottom: 1.5em;
         border-radius: 5px;
-
+text-align: justify;
     }
 }
 
@@ -907,6 +909,7 @@ menu, nav, section {
     color: #e2e2e2;
     font-size: 17px;
     padding: 2em;
+    text-align: justify;
 }
 
 /*---------------------------------------------------------------*/
